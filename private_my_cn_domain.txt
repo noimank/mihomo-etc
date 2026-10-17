@@ -1,0 +1,50 @@
+# --------------------------------------------------------------------
+# 具体写法参考：https://wiki.metacubex.one/handbook/syntax/#domain-wildcards
+# 域名通配符
+##1.Clash 的通配符 * 一次只能匹配一级域名
+#  *.baidu.com 只匹配 tieba.baidu.com 而不匹配 123.tieba.baidu.com 或者 baidu.com ，  *只匹配 localhost 等没有.的主机名
+
+#2.通配符 ＋ 类似 DOMAIN-SUFFIX, 可以一次性匹配多个级别
+## ＋.baidu.com 匹配 tieba.baidu.com 和 123.tieba.baidu.com 或者 baidu.com ， 通配符 ＋ 只能用于域名前缀匹配
+
+#3.通配符 . 可以一次性匹配多个级别
+##.baidu.com 匹配 tieba.baidu.com 和 123.tieba.baidu.com, 但不能匹配 baidu.com ，通配符 . 只能用于域名前缀匹配
+
+# --------------------------------------------------
+
+#内部域名-----start
++.uimpcloud.com
++.cs2025.com
++.chalco-steering.com
++.chaoxiiot.com
+
+
+#自己补充的国内直连规则
++.cn.bing.com
++.kuaecloud.net
++.mthreads.com
++.c2m.fun
++.agedm.io
+
+#大模型相关
++.bigmodel.cn
++.stepfun.com
++.openrouter.ai
++.gitea.cn
++.waditu.com
++.kimi.com
++.minimaxi.com
++.modelscope.cn
++.opencode.ai
+
+#阿里云相关
+
++.aliyuncs.com
++.aliyun.com
++.alibabacloud.com
+
++.gitlab.com
++.akfamily.xyz
++.three2all.top
+# 股票数据同步的域名https://github.com/hello245m/free-stockdb
++.123128.xyz
